@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Моя визитка</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#home">Главная</a></li>
+          <li><a href="#about">Обо мне</a></li>
+          <li><a href="#skills">Навыки</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+          <li><a href="#cats">Котики</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="section">
+        <div class="intro">
+          <div class="images">
+            <img
+              class="subscribe"
+              src="./img/мой уник3.png"
+              alt="уник"
+              width="400"
+              height="300"
+              style="margin-right: 0%"
+            />
+            <img src="./img/уник.jpg" alt="челгу" width="400" height="300" />
+          </div>
+
+          <h1 style="margin-top: 20%" class="header">Привет, я Вадим</h1>
+          <h2 style="margin-top: 20%" class="font-size">
+            И это мой сайт обо мне, тут расскажу кто я,
+            <h2>чем увлекаюсь и что умею</h2>
+          </h2>
+          <button class="btn" onclick="changeClass()" id="common_button">
+            Стрёмная кнопка
+          </button>
+        </div>
+      </section>
+      <img
+        src="./img/нажми.png"
+        alt="нажми"
+        class="nazhmi"
+        width="500px"
+        height="100px"
+      />
+      <style>
+        .beautiful_button {
+          background-color: #007bff;
+          color: white;
+          border: none;
+          padding: 12px 24px;
+          border-radius: 30px;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: all 0.3s;
+          margin-top: 20px;
+        }
+      </style>
+
+      <script>
+        function changeClass() {
+          const elem = document.getElementById("common_button");
+          elem.classList.toggle("beautiful_button");
+          let text = elem.textContent;
+          console.log(text);
+          if (elem.textContent === "Красивая кнопка") {
+            elem.innerText = "Стрёмная кнопка";
+          } else elem.innerText = "Красивая кнопка";
+          console.log("Кнопка теперь красивая!");
+        }
+      </script>
+
+      <section id="about" class="section">
+        <h2 class="header">Обо мне</h2>
+        <img
+          src="./img/звезда.png"
+          alt="zvezda"
+          weight="200px"
+          height="200px"
+          style="margin-left: 1500px"
+        />
+        <img
+          src="./img/звезда2.png"
+          alt="zvezda2"
+          weight="200px"
+          height="200px"
+          style="margin-right: 1500px"
+        />
+
+        <div class="about-content">
+          <h3>
+            Я Бахтияров Вадим, мне 18 лет и я учусь в Челябинском
+            Государственном университете
+            <p>на направлении "Программная инженерия" на 1 курсе</p>
+            <p>
+              Мне нравилось программировать еще со школы, и еще со школьной
+              скамьи я выбрал профессию программиста
+            </p>
+          </h3>
+          <div style="margin-top: 1%" class="university-logo">
+            <img
+              src="./img/звезда.png"
+              alt="zvezda"
+              weight="200px"
+              height="200px"
+              style="margin-left: 1500px"
+            />
+            <img
+              class="chelgu-logo"
+              src="./img/челгу.jpg"
+              alt="Логотип ЧелГУ"
+              width="150"
+              height="150"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <h1>Мои навыки</h1>
+        <p class="skills-text">
+          Я увлекаюсь программированием с 9 класса, изучал Python
+          самостоятельно, за 1 курс научился базам языка C#, также недавно
+          научился базе верстки сайтов на HTML и CSS. Помимо программирования
+          увлекаюсь спортом(волейбол, футбол), а также пишу музыку, биты и т.д.
+          на FL Studio
+        </p>
+        <div class="skills-container">
+          <img
+            src="./img/python.jpg"
+            alt="Python"
+            width="125"
+            height="125"
+            class="skill_image"
+          />
+          <img
+            src="./img/Logo-csharp.png"
+            alt="C#"
+            width="100"
+            height="100"
+            class="skill_image"
+          />
+          <img
+            src="./img/edx7m32v5s671.png"
+            alt="FL_Studio"
+            width="100"
+            height="100"
+            class="skill_image"
+          />
+          <img
+            src="./img/html2.png"
+            alt="HTML"
+            width="100"
+            height="100"
+            class="skill_image"
+          />
+        </div>
+      </section>
+
+      <section id="contacts" class="section">
+        <h2>Контакты</h2>
+        <div class="contact-icons">
+          <a href="https://t.me/six_w" target="_blank" class="icon-link">
+            <i class="fab fa-telegram"></i>
+          </a>
+          <a href="https://vk.com/a1rdose" target="_blank" class="icon-link">
+            <i class="fab fa-vk"></i>
+          </a>
+          <a
+            href="https://github.com/airdose"
+            target="_blank"
+            class="icon-link"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://steamcommunity.com/profiles/76561199385456321/"
+            target="_blank"
+            class="icon-link"
+          >
+            <i class="fab fa-steam"></i>
+          </a>
+        </div>
+      </section>
+
+      <section id="cats" class="section">
+        <h2>Котики</h2>
+        <div class="cats-gallery">
+          <img src="./img/cat1.jpg" alt="cat1" class="cat-photo" />
+          <img src="./img/cat2.jpg" alt="cat2" class="cat-photo" />
+          <img src="./img/cat3.jpg" alt="cat3" class="cat-photo" />
+          <img src="./img/cat5.jpg" alt="cat5" class="cat-photo" />
+        </div>
+      </section>
+    </main>
+
+    <script defer src="script.js"></script>
+  </body>
+</html>
