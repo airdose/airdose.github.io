@@ -7,6 +7,37 @@ body {
   line-height: 1.6;
 }
 
+.down {
+  margin-top: 20%;
+}
+.section_contacts,
+.section_home {
+  position: relative;
+}
+.tg_pointer {
+  position: absolute;
+  left: 30%;
+  bottom: 70px;
+}
+
+.vk_pointer {
+  position: absolute;
+  left: 41%;
+  margin-top: 280px;
+}
+
+.git_pointer {
+  position: absolute;
+  left: 52%;
+  margin-top: 280px;
+}
+
+.steam_pointer {
+  position: absolute;
+  left: 58%;
+  margin-top: 90px;
+}
+
 header {
   background-color: #ceb8b8;
   padding: 1rem 0;
@@ -42,7 +73,12 @@ h3 {
   padding: 0;
   margin: 0;
 }
-
+.menu_btn {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 16px;
+}
 .subscribe {
   position: absolute;
   left: -410px;
@@ -53,7 +89,7 @@ h3 {
   position: absolute;
   right: 360px;
   transform: translateY(50%);
-  top: 730px;
+  top: 670px;
 }
 
 .images {
@@ -204,4 +240,8 @@ h3 {
   100% {
     transform: translateX(0);
   }
+}
+
+.not_vision {
+  display: none;
 }

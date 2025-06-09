@@ -11,20 +11,51 @@
     />
   </head>
   <body>
+        <script defer>
+      function change_page (page){
+        const home = document.getElementById("home");
+        const about = document.getElementById("about");
+        const skills = document.getElementById("skills");
+        const contacts = document.getElementById("contacts");
+        const cats = document.getElementById("cats")
+
+      if (page === "cats"){
+        [home, about, skills, contacts].map((item) => {
+          item.classList.add("not_vision")
+        }) 
+        cats.classList.remove("not_vision")
+        console.log(3)
+      } else {
+        [home, about, skills, contacts].map((item) => {
+          item.classList.remove("not_vision")
+        }) 
+        cats.classList.add("not_vision")
+      }
+      }
+
+    </script>
     <header>
       <nav>
         <ul class="nav-menu">
-          <li><a href="#home">Главная</a></li>
-          <li><a href="#about">Обо мне</a></li>
-          <li><a href="#skills">Навыки</a></li>
-          <li><a href="#contacts">Контакты</a></li>
-          <li><a href="#cats">Котики</a></li>
+          <li><button type="button" class="menu_btn" onclick="change_page('home')"><a href="#home">Главная</a></button></li>|
+          <li><button type="button" class="menu_btn" onclick="change_page('about')"><a href="#about">Обо мне</a></button></li>|
+          <li><button type="button" class="menu_btn" onclick="change_page('skills')"><a href="#skills">Навыки</a></button></li>|
+          <li><button type="button" class="menu_btn" onclick="change_page('contacts')"><a href="#contacts">Контакты</a></button></li>|
+          <li><button type="button" class="menu_btn" onclick="change_page('cats')"><a href="#cats">Котики</a></button></li>|
+          <li><button type="button" class="menu_btn" onclick="change_page('card')"><a href="./business_card.html">Карточка</a></button></li>
         </ul>
       </nav>
     </header>
-
+    
     <main>
-      <section id="home" class="section">
+      <section id="home" class="section section_home">
+      <img
+        src="./img/нажми.png"
+        alt="нажми"
+        class="nazhmi"
+        width="500px"
+        height="100px"
+      /> 
         <div class="intro">
           <div class="images">
             <img
@@ -48,13 +79,7 @@
           </button>
         </div>
       </section>
-      <img
-        src="./img/нажми.png"
-        alt="нажми"
-        class="nazhmi"
-        width="500px"
-        height="100px"
-      />
+
       <style>
         .beautiful_button {
           background-color: #007bff;
@@ -86,15 +111,15 @@
         <img
           src="./img/звезда.png"
           alt="zvezda"
-          weight="200px"
-          height="200px"
+          weight="150px"
+          height="150px"
           style="margin-left: 1500px"
         />
         <img
           src="./img/звезда2.png"
           alt="zvezda2"
-          weight="200px"
-          height="200px"
+          weight="150px"
+          height="150px"
           style="margin-right: 1500px"
         />
 
@@ -167,7 +192,9 @@
         </div>
       </section>
 
-      <section id="contacts" class="section">
+      <section id="contacts" style="margin-bottom: 10%" class="section section_contacts">
+      <img src="./img/тг.png" alt="tg" class="tg_pointer" width="200px" height="100px">
+      <img src="./img/steam.png" alt="steam" class="steam_pointer" width="200px" height="100px">
         <h2>Контакты</h2>
         <div class="contact-icons">
           <a href="https://t.me/six_w" target="_blank" class="icon-link">
@@ -191,9 +218,10 @@
             <i class="fab fa-steam"></i>
           </a>
         </div>
+        <img src="./img/vk.png" alt="vk" class="vk_pointer" width="150px" height="100px">
+        <img src="./img/github.png" alt="github" class="git_pointer" width= "110px" height="100px">
       </section>
-
-      <section id="cats" class="section">
+      <section id="cats" class="section not_vision">
         <h2>Котики</h2>
         <div class="cats-gallery">
           <img src="./img/cat1.jpg" alt="cat1" class="cat-photo" />
@@ -205,5 +233,6 @@
     </main>
 
     <script defer src="script.js"></script>
+
   </body>
 </html>
